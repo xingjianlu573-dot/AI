@@ -2,6 +2,8 @@
 
 🔗 **[在线演示](https://xingjianlu573-dot.github.io/AI/)** ｜ **[GitHub 仓库](https://github.com/xingjianlu573-dot/AI)** ｜ [🇨🇳 国内部署指南](./README_CN.md)
 
+> 🛡️ 2026-10-27 修复：导入容器共享数据卷（AI-01）、.env 变量去重（AI-02）、错误工作流自动绑定（AI-03）；新增实施交付案例包 [docs/implementation-delivery.md](docs/implementation-delivery.md)。
+
 > 一个面向企业场景的 **AI 工作流自动化** 案例：基于开源工作流引擎 [n8n](https://github.com/n8n-io/n8n)，把每天涌入的客户咨询、表单、邮件、文档 **自动接住 → 听懂 → 分类 → RAG 检索 → 落库 → SLA 路由 → 通知到人**。
 > 开箱支持 **国产大模型切换**（DeepSeek / 通义千问 / 智谱 GLM / 月之暗面 Kimi）、**RAG 知识库增强**、**SLA 矩阵路由**、**国内一键 Docker 部署**，无需海外网络环境。
 
