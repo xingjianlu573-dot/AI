@@ -157,6 +157,8 @@
 cp .env.example .env          # 填一个国产模型 Key + 飞书凭据
 docker compose up -d          # 一键起 n8n（建议先配国内镜像加速）
 # 打开 http://localhost:5678，工作流已自动导入，激活即可
+# 说明：n8n-import 与主服务共享同一数据卷（n8n_data），导入对主服务可见；
+#       error-handler.json 默认启用，并已通过 settings.errorWorkflow 自动绑定为主流程的错误处理工作流。
 ```
 
 

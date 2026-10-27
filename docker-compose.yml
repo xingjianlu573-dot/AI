@@ -30,6 +30,8 @@ services:
 
   # 一次性导入容器：n8n 不会自动扫描挂载目录，必须显式 import。
   # 用 list:workflow 判空，避免重复 up 时重复导入。
+  # 必须与主 n8n 共享同一数据卷（n8n_data），否则导入会写进独立的匿名卷，
+  # 主服务看不到任何工作流（AI-01）。
   n8n-import:
     image: n8nio/n8n:latest
     env_file:
@@ -38,6 +40,7 @@ services:
       n8n:
         condition: service_healthy
     volumes:
+      - n8n_data:/home/node/.n8n
       - ./workflows:/workflows:ro
     entrypoint: ["/bin/sh", "-c"]
     command:
